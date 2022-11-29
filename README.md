@@ -50,7 +50,7 @@ Type dot -V in cmd to check it is working or not.
 
 Make: GNU make utility to maintain groups of programs.
 
-To install it go to the link: [make](https://gnuwin32.sourceforge.net/packages/make.htm)and download appropriate version.
+To install it go to the link: [make](https://gnuwin32.sourceforge.net/packages/make.htm) and download appropriate version.
 
 Run installer.
 
