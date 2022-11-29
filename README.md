@@ -59,3 +59,6 @@ Select full installation in Select Components.
 Go to *\GnuWin32\bin folder and add it to system path. To add it to system path type exact "advancedsystemsettings" in windows startmenu search bar and Select "Environment Variables" button, Select Path variable and press edit button, press new in pop up dialog box, and paste the path i.e. *\GnuWin32\bin
 
 Type yosys in make -v to check whether it is working or not.
+
+## Simulation and Synthesis for windows
+
