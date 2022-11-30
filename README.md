@@ -141,6 +141,8 @@ module test;
 endmodule
 ```
 
+and save it as inverter_tb.v
+
 A test bench is a module without inputs or outputs. It typically includes only statements to generate test signals and simulator directives to control the simulation process and the generation of results, together with an instance of the module that is to be tested: the Unit Under Test (UUT).
 
 Compile the whole design (inverter module and test bench) with the following command: ```iverilog -o inverter.out inverter.v inverter_tb.v```
