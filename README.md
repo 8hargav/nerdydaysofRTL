@@ -30,7 +30,7 @@ To install it go to the link: [yosys](https://github.com/YosysHQ/oss-cad-suite-b
 
 Extract it.
 
-Go to *\oss-cad-suite\bin folder and add it to system path. To add it to system path type exact "advancedsystemsettings" in windows startmenu search bar and Select "Environment Variables" button, Select Path variable and press edit button, press new in pop up dialog box, and paste the path i.e. *\oss-cad-suite\bin
+Go to ```*\oss-cad-suite\bin``` folder and add it to system path. To add it to system path type exact "advancedsystemsettings" in windows startmenu search bar and Select "Environment Variables" button, Select Path variable and press edit button, press new in pop up dialog box, and paste the path i.e. *\oss-cad-suite\bin
 
 Type yosys in cmd to check whether it is working or not.
 
