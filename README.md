@@ -157,7 +157,7 @@ Take a look to the simulation results with: ```gtkwave inverter.vcd```
 
 To create a makefile, write following code in text editor and save it without any extension (or remove extension if any)
 
-```cmake
+```makefile
 module = inverter
 
 TOOLCMD = iverilog -o $(module).out -Wall -Winfloop -g2012
