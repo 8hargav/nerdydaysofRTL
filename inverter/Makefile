@@ -25,4 +25,4 @@ synth: build
 	yosys synth.ys
 
 clean:
-	del $(module).dot /Q /F
+	del $(module).dot $(module).vcd $(module).out synth.ys synth.v /Q /F
