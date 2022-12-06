@@ -1,9 +1,9 @@
-module haldadder_tb();
+module halfadder_tb();
 
   reg  a, b;
   wire  sum, carry;
 
-  haldadder uut(sum,carry,a,b);
+  halfadder uut(sum,carry,a,b);
 
   initial
     begin
