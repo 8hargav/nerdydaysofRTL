@@ -1,2 +1,5 @@
 *.vcd
 *.out
+*.ys
+synth.v
+*.dot
