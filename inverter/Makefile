@@ -19,7 +19,7 @@ build: clean
 	echo show -prefix $(module) >> synth.ys
 
 convert: 
-	dot $(module).dot -Tpng -o inverter.png
+	dot $(module).dot -Tpng -o $(module).png
 
 synth: build
 	yosys synth.ys

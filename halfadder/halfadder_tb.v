@@ -5,18 +5,20 @@ module halfadder_tb();
 
   halfadder uut(sum,carry,a,b);
 
-  initial
-    begin
+initial
+  begin
       a = 0; b =0;
   #5; a = 0; b =1;
   #5; a = 1; b =0;
   #5; a = 1; b =1;
   #5;
-    end
+  end
 
  //Dump waves (only required here)
 initial
   begin
-    $dumpfile("dump.vcd");
+    $dumpfile("halfadder.vcd");
     $dumpvars(1);
   end
+
+endmodule

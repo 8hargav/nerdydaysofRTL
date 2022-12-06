@@ -18,8 +18,8 @@ build: clean
 	echo write_verilog synth.v >> synth.ys
 	echo show -prefix $(module) >> synth.ys
 
-convert: 
-	dot $(module).dot -Tpng -o inverter.png
+convert:
+	dot $(module).dot -Tpng -o $(module).png
 
 synth: build
 	yosys synth.ys

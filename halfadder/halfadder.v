@@ -1,4 +1,4 @@
-module HF(sum,carry,a,b);
+module halfadder(sum,carry,a,b);
 
   output sum, carry;
   input a, b;
