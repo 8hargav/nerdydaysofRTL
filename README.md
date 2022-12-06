@@ -153,7 +153,11 @@ Simulate the design with: ```vvp inverter.out```
 
 Take a look to the simulation results with: ```gtkwave inverter.vcd```
 
-### (3) Make things easy using makefile
+### (3) Synthesis using yosys
+
+
+
+### (4) Make things easy using makefile
 
 To create a makefile, write following code in text editor and save it without any extension (or remove extension if any)
 
@@ -178,10 +182,26 @@ build: clean
 	echo write_verilog synth.v >> synth.ys
 	echo show -prefix $(module) >> synth.ys
 
+convert: 
+	dot $(module).dot -Tpng -o inverter.png
+
 synth: build
 	yosys synth.ys
 
 clean:
-	del $(module).dot /Q
+	del $(module).dot /Q /F
 ```
 
+Makefile makes easy to compile and run the programs but it is necessary for a beginner to understand what is happening at the back. However after getting the idea of design, simulation and synthesis, running scripts from Makefile is pretty handy.
+
+#### Steps to use Makefile
+
+(1) First step is to change the variable name at top of the line ```module = inverter``` to whatever verilog module you're writing (i.e. inverter here). For ease I am keeping the module inside the folder with the same name.
+
+(2) Run ```make compile``` in command prompt to compile the verilog design code. You should be at the directory where your verilog and Makefile file lies.
+
+(3) Run ```make sim``` to simulate the design and view waveforms to verify.
+
+(4) Run ```make synth``` to perform synthesis of the design.
+
+(5) Run ```make convert``` to get the schematics in png format.
