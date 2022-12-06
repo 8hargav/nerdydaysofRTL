@@ -152,3 +152,36 @@ Note that the module 'test' in 'inverter_tb.v' uses the module 'inverter' define
 Simulate the design with: ```vvp inverter.out```
 
 Take a look to the simulation results with: ```gtkwave inverter.vcd```
+
+### (3) Make things easy using makefile
+
+To create a makefile, write following code in text editor and save it without any extension (or remove extension if any)
+
+```cmake
+module = inverter
+
+TOOLCMD = iverilog -o $(module).out -Wall -Winfloop -g2012
+
+compile: clean
+	$(TOOLCMD) $(module).v
+
+sim: clean
+	$(TOOLCMD) $(module).v $(module)_tb.v
+	vvp $(module).out
+	gtkwave $(module).vcd -r ../gtkwaverc &
+
+build: clean
+	copy nul "synth.ys"
+	echo read -sv $(module).v > synth.ys
+	echo hierarchy -top $(module) >> synth.ys
+	echo proc; opt; techmap; opt >> synth.ys
+	echo write_verilog synth.v >> synth.ys
+	echo show -prefix $(module) >> synth.ys
+
+synth: build
+	yosys synth.ys
+
+clean:
+	del $(module).dot /Q
+```
+
