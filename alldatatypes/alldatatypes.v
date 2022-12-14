@@ -11,6 +11,14 @@ wire w ; // added to get the inverse of d, it should be wire, check it out why??
 wor p ;
 wand q ;
 tri r ;
+// trireg s ; //systemverilog is required to use trireg nets
+// trireg (medium) capacitor ; //systemverilog is required to use trireg nets
+triand t ;
+trior u ;
+tri1 m ;
+tri0 n;
+supply1 o ;
+supply0 my_gnd ;
 integer j, k ; // integer variable
 integer i[1:32] ; // array of integer variables
 time newtime ;
@@ -42,5 +50,11 @@ end
   assign q = f ;
 
   assign r = (d) ? l:1'bz ;
+ // assign s = (d) ? l:1'bz ; //systemverilog is required to use trireg nets
+  assign t = (d) ? l:1'bz ;
+  assign u = (d) ? l:1'bz ;
+  assign m = 0 ;
+  assign n = 1 ;
+
 
 endmodule
